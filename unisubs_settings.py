@@ -113,3 +113,4 @@ ADMIN_MEDIA_PREFIX = "%sadmin/" % STATIC_URL_BASE
 #  the keyd cache apps need this:
 CACHE_TIMEOUT  = 60
 CACHE_PREFIX  = "unisubscache"
+SITE_ID = 15
