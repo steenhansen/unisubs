@@ -385,6 +385,7 @@ INSTALLED_APPS = (
     'socialauth',
     # our apps
     'accountlinker',
+    'deployer',
     'comments',
     'messages',
     'profiles',

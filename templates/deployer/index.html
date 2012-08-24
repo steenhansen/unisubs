@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load paginator i18n teams_tags media_compressor %}
+
+{% block title %}
+    Deployer | Amara
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    {% include_bundle "widget-css"%}
+{% endblock %}
+
+{% block body_attrs %}class="v1"{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    {% include_bundle "unisubs-offsite-compiled" %}
+{% endblock %}
+
+{% block main_content %}
+    <h2>{% trans 'THE DEPLOYER' %}</h2>
+
+    <div class="view grid_9 alpha">
+        {% if is_paginated %}{% paginator %}{% endif %}
+            <ul class="listing teams">
+                {% for deploy in deploys %}
+                <li>
+                    <h3>
+                        Deploy by {{ user }} on {{ deploy.when }}
+                        <span class="descriptor">{{ deploy.get_status }}</span>
+                    </h3>
+                    {% if deploy.commit %}
+                    <a href="https://github.com/pculture/unisubs/commit/{{deploy.commit}}">on github</a>
+                    {% endif %}
+                </li>
+            {% empty %}
+                <p class="empty">{% trans 'Sorry, no deploys found.' %}</p>
+            {% endfor %}
+        </ul>
+    {% if is_paginated %}{% paginator %}{% endif %}
+</div>
+
+<div class="controls grid_3 omega">
+    <a href="{% url deployer:deploy %}" class="button primary start_team">{% trans 'Start a deploy' %}</a>
+</div>
+
+{% endblock %}
+
+

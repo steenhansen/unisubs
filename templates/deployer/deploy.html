@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load paginator i18n teams_tags %}
+
+{% block title %}
+    Deployer | Amara
+{% endblock %}
+
+{% block body_attrs %}class="v1"{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+{% endblock %}
+
+{% block main_content %}
+    <h2>{% trans 'Deploy' %}</h2>
+
+    <div class="view grid_9 alpha">
+        <form method='post' action="." enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="grid_4 alpha">
+                <fieldset>
+                    <legend></legend>
+                    {% include "_form_field.html" with field=form.password help_text="Sorry, we can't authenticate you without your password. Yet." %}
+                    {% include "_form_field.html" with field=form.what_to_deploy %}
+                    {% include "_form_field.html" with field=form.environment %}
+                <fieldset>
+            </div>
+            <div class="submit">
+                <button class="button">{% trans 'Deploy' %}</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

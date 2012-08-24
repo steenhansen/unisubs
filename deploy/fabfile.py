@@ -22,10 +22,12 @@ from datetime import datetime
 from functools import wraps
 import time
 
-import fabric.colors as colors
+import fabric.colors as fabric_colors
 from fabric.api import run, sudo, env, cd, local as _local, abort
 from fabric.context_managers import settings, hide
 from fabric.utils import fastprint
+
+import functools
 
 
 ADD_TIMESTAMPS = """ | awk '{ print strftime("[%Y-%m-%d %H:%M:%S]"), $0; fflush(); }' """
@@ -33,9 +35,11 @@ WRITE_LOG = """ | tee /tmp/%s.log """
 
 # Output Management -----------------------------------------------------------
 PASS_THROUGH = ('sudo password: ', 'Sorry, try again.')
+
 class CustomFile(file):
     def __init__(self, *args, **kwargs):
         self.log = ""
+        self.log_lines = []
         return super(CustomFile, self).__init__(*args, **kwargs)
 
     def _record(self, s):
@@ -46,11 +50,33 @@ class CustomFile(file):
             self.log = ""
 
     def write(self, s, *args, **kwargs):
-        self._record(s)
-        return super(CustomFile, self).write(s, *args, **kwargs)
+        if not env.get('no_output', False):
+            self._record(s)
+            return super(CustomFile, self).write(s, *args, **kwargs)
+        else:
+            self.log_lines.append(s)
+            
+    def readlines(self):
+        lines = list(self.log_lines)
+        self.log_lines = []
 
+        return lines
 
 _out_log = CustomFile('fabric.log', 'w')
+
+class CustomColors(object):
+
+    def _generate_color(self, color, text, *args, **kwargs):
+        if env.get('no_colors', False):
+            return text
+
+        return getattr(fabric_colors, color)(text, *args, **kwargs)
+
+    def __getattr__(self, name):
+        return functools.partial(self._generate_color, name)
+
+colors = CustomColors()
+
 class Output(object):
     """A context manager for wrapping up standard output/error nicely.
 
@@ -82,7 +108,7 @@ class Output(object):
         self.message = message
 
     def __enter__(self):
-        if self.message:
+        if self.message and not env.get('no_output', False):
             fastprint(colors.white(self.message.ljust(60) + " -> ", bold=True))
 
         sys.stdout = _out_log
@@ -99,14 +125,15 @@ class Output(object):
     def __exit__(self, type, value, tb):
         sys.stdout = sys.__stdout__
         sys.stderr = sys.__stderr__
-        if type is None:
-            fastprint(colors.green("OK\n", bold=True))
-        else:
-            fastprint(colors.red("FAILED\n", bold=True))
-            fastprint(colors.red(
-                "\nThere was an error.  "
-                "See ./fabric.log for the full transcript of this run.\n",
-                bold=True))
+        if not env.get('no_output', False):
+            if type is None:
+                fastprint(colors.green("OK\n", bold=True))
+            else:
+                fastprint(colors.red("FAILED\n", bold=True))
+                fastprint(colors.red(
+                    "\nThere was an error.  "
+                    "See ./fabric.log for the full transcript of this run.\n",
+                    bold=True))
 
     def fastprint(self, s):
         sys.stdout = sys.__stdout__
@@ -628,6 +655,18 @@ def update_integration():
     '''
     with Output("Updating nested unisubs-integration repositories"):
         _execute_on_all_hosts(_update_integration)
+
+def show_commit():
+    if env.admin_dir:
+        env.host_string = env.admin_host
+        base_dir = env.admin_dir
+    else:
+        env.host_string = DEV_HOST
+        base_dir = env.web_dir
+
+    env.host_string = env.web_hosts[0]
+    with cd(os.path.join(base_dir, 'unisubs')):
+        return run('git rev-parse --short HEAD 2> /dev/null')
 
 def _notify(subj, msg, audience='ehazlett@pculture.org'):
     mail_from_host = 'pcf-us-dev.pculture.org:2191'

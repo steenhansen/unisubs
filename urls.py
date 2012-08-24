@@ -148,6 +148,8 @@ urlpatterns = patterns('',
         namespace='teams', app_name='teams')),
     url(r'^profiles/', include('profiles.urls', namespace='profiles',
         app_name='profiles')),
+    url(r'^deployer/', include('deployer.urls', namespace='deployer',
+        app_name='deployer')),
     url(r'auth/', include('auth.urls', namespace='auth', app_name='auth')),
     url(r'auth/', include('thirdpartyaccounts.urls', namespace='thirdpartyaccounts', app_name='thirdpartyaccounts')),
 )
