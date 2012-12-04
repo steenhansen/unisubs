@@ -56,7 +56,7 @@
                     {% for task in user_tasks %}
                         <li>
                             <h3><a href="{{ task.team_video.video.get_absolute_url }}" title="View video">
-                                {{ task.team_video.video.title }}
+                                {{ task.team_video.video.title_display }}
                             </a></h3>
                             <a href="{{ task.team_video.video.get_absolute_url }}" class="thumb"><img src="{{ task.team_video.get_thumbnail }}" alt="{{ task.team_video.title }}"></a>
                             <ul class="actions">
@@ -182,7 +182,7 @@
                                         {% endif %}
                                     {% else %} {# this is a non-task team #}
                                         {% if team_video.video.languages_count < 1 or not user.get_languages %}
-                                            <a href="#" id="video-{{ team_video.id }}" title="Get started now">{% trans 'Create subtitles' %}</a>
+                                            <a href="#" class="video-{{ team_video.id }}" title="Get started now">{% trans 'Create subtitles' %}</a>
                                         {% else %} {# this video already has languages #}
                                             {% if team_video.languages|length > 1 %}
                                                 <a href="#" class="dropdown">
