@@ -55,12 +55,12 @@ class WistiaVideoType(VideoType):
     def video_id(self):
         return self.videoid
 #   http://fast.wistia.com/embed/iframe/ivaqrc8ue8
-    def convert_to_video_url(self):
+    def convert_to_video_hootsuite(self):
         return 'http://fast.wistia.com/embed/iframe/%s' % self.video_id
 
     @classmethod
     def video_url(cls, obj):
-        return 'http://fast.wistia.com/embed/iframe/%s' % obj.videoid
+        return 'http://hootsuite.wistia.com/embed/iframe/%s' % obj.videoid
 
     @classmethod
     def matches_video_url(cls, url):

@@ -77,8 +77,9 @@ unisubs.player.WistiaVideoSource.getMediaSource = function(videoURL, opt_videoCo
     // example http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
  
   //           http://hootsuite.wistia.com/medias/17bvist1ia
-    
-    if (/^\s*https?:\/\/(.+)?(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/.*/.test(videoURL)) {
+     console.log('before11'+videoURL+'00');
+    if (/^\s*https?:\/\/(.+)?(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?.*/.test(videoURL)) {
+console.log('after  ');
       var videoIDExtract = /(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?([^\?]*)/i.exec(videoURL);
       console.log(videoIDExtract);
       if (videoIDExtract)
