@@ -74,8 +74,19 @@ class VideoTypeRegistrar(dict):
         domain and self.domains.append(domain)
         
     def video_type_for_url(self, url):
+        import logging
+        
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
+
         for video_type in self.itervalues():
+           # log.error(video_type ) 
             if video_type.matches_video_url(url):
+              #  log.error('matched!!! 23234df')
                 return video_type(url)
             
 class VideoTypeError(Exception):

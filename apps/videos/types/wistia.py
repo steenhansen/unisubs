@@ -25,10 +25,20 @@ import re
 from django.utils.translation import ugettext_lazy as _
 
 # apps/videos/types/wistia.py
-# import logging
+import logging
+
+
 
 DAILYMOTION_REGEX = re.compile(r'https?://(?:[^/]+[.])?dailymotion.com/video/(?P<video_id>[-0-9a-zA-Z]+)(?:_.*)?')
-WISTIA_REGEX = re.compile(r'https?://([^/]+\.)?(wistia\.com|wi\.st)/(medias|embed)/(iframe/)?(?P<video_id>\d+)')
+
+  
+#WISTIA_REGEX = re.compile(r'https?://([^/]+\.)?(hootsuite\.wistia\.com|wi\.st)/(medias|embed)/(iframe/)?(?P<video_id>\d+)')
+
+#WISTIA_REGEX = re.compile(r'https?://([^/]+\.)?(hootsuite\.wistia\.com)/(medias|embed)/(iframe/)?(?P<video_id>[-0-9a-zA-Z]+)')
+
+#http://hootsuite.wistia.com/medias/17bvist1ia
+WISTIA_REGEX = re.compile(r'http://(hootsuite\.wistia\.com)/(medias)/([-0-9a-zA-Z]+)')
+
 
 class WistiaVideoType(VideoType):
 
@@ -54,29 +64,56 @@ class WistiaVideoType(VideoType):
 
     @classmethod
     def matches_video_url(cls, url):
+ 
+     #   import logging
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
 
         video_id = cls.get_video_id(url)
+        log.error('wistia - matches_video_url ' + video_id )
         if video_id:
-            metadata = cls.get_metadata(video_id)
-            stream_flv_mini_url = metadata.get('url', '')
-            return bool(stream_flv_mini_url)
-
+            return True
         return False
 
     def create_kwars(self):
         return {'videoid': self.video_id}
 
     def set_values(self, video_obj):
-        metadata = self.get_metadata(self.video_id)
-        video_obj.description = metadata.get('description', u'')
-        video_obj.title = metadata.get('title', '')
-        video_obj.thumbnail = metadata.get('thumbnail_url') or ''
+        #metadata = self.get_metadata(self.video_id)
+        #video_obj.description = metadata.get('description', u'')
+        #video_obj.title = metadata.get('title', '')
+        #video_obj.thumbnail = metadata.get('thumbnail_url') or ''
         return video_obj
 
     @classmethod
     def get_video_id(cls, video_url):
+
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
+ 
+     #   log.error('cls.format_url ' + cls.format_url(video_url) )
+
+      #  log.error(type(WISTIA_REGEX))
+
         match = WISTIA_REGEX.match(cls.format_url(video_url))
-        return match and match.group(4)
+ 
+       # log.error( type(match) )
+
+
+     #   log.error('wistia - get_video_id a ' + match.group(0) )
+     #   log.error('wistia - get_video_id B ' + match.group(1) )
+     #   log.error('wistia - get_video_id c ' + match.group(2) )
+     #   log.error('wistia - get_video_id D ' + match.group(3) )
+     #   log.error('wistia - get_video_id e ' + match.group(4) )
+        return match and match.group(3)
 """
     @classmethod
     def get_metadata(cls, video_id):

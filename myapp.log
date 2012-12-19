@@ -93,3 +93,296 @@
 2012-12-19 10:43:38,583 ERROR video_type not crash
 2012-12-19 10:43:38,584 ERROR not type 
 2012-12-19 10:43:38,584 ERROR not type 
+2012-12-19 14:31:49,267 ERROR not match ++ 
+2012-12-19 14:31:49,285 ERROR not match ++ 
+2012-12-19 14:31:49,300 ERROR not match ++ 
+2012-12-19 14:31:49,301 ERROR not match ++ 
+2012-12-19 14:31:49,301 ERROR not match ++ 
+2012-12-19 14:31:49,302 ERROR not match ++ 
+2012-12-19 14:31:49,302 ERROR not match ++ 
+2012-12-19 14:31:49,303 ERROR not match ++ 
+2012-12-19 14:31:49,304 ERROR not match ++ 
+2012-12-19 14:33:37,522 ERROR <class 'apps.videos.types.brigthcove.BrightcoveVideoType'>
+2012-12-19 14:33:37,523 ERROR <class 'apps.videos.types.bliptv.BlipTvVideoType'>
+2012-12-19 14:33:37,523 ERROR <class 'apps.videos.types.dailymotion.DailymotionVideoType'>
+2012-12-19 14:33:37,524 ERROR <class 'apps.videos.types.htmlfive.HtmlFiveVideoType'>
+2012-12-19 14:33:37,524 ERROR <class 'apps.videos.types.mp3.Mp3VideoType'>
+2012-12-19 14:33:37,525 ERROR <class 'apps.videos.types.flv.FLVVideoType'>
+2012-12-19 14:33:37,525 ERROR <class 'apps.videos.types.wistia.WistiaVideoType'>
+2012-12-19 14:33:37,525 ERROR <class 'apps.videos.types.vimeo.VimeoVideoType'>
+2012-12-19 14:33:37,529 ERROR <class 'apps.videos.types.youtube.YoutubeVideoType'>
+2012-12-19 14:34:49,621 ERROR <class 'apps.videos.types.brigthcove.BrightcoveVideoType'>
+2012-12-19 14:34:49,622 ERROR <class 'apps.videos.types.bliptv.BlipTvVideoType'>
+2012-12-19 14:34:49,622 ERROR <class 'apps.videos.types.dailymotion.DailymotionVideoType'>
+2012-12-19 14:34:49,627 ERROR <class 'apps.videos.types.htmlfive.HtmlFiveVideoType'>
+2012-12-19 14:34:49,627 ERROR <class 'apps.videos.types.mp3.Mp3VideoType'>
+2012-12-19 14:34:49,628 ERROR <class 'apps.videos.types.flv.FLVVideoType'>
+2012-12-19 14:34:49,628 ERROR <class 'apps.videos.types.wistia.WistiaVideoType'>
+2012-12-19 14:34:49,628 ERROR <class 'apps.videos.types.vimeo.VimeoVideoType'>
+2012-12-19 14:34:49,629 ERROR <class 'apps.videos.types.youtube.YoutubeVideoType'>
+2012-12-19 14:40:59,399 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:40:59,399 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:43:07,748 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:43:07,748 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:43:34,113 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:43:34,113 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:45:03,794 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:45:03,794 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:46:07,751 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:46:07,751 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:46:07,757 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:46:07,757 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:46:07,757 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:10,460 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:10,460 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:10,464 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:10,464 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:10,464 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:56,589 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:56,589 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:56,592 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:56,592 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 14:56:56,592 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:03:33,703 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:03:33,703 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:03:33,709 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:03:33,709 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:03:33,709 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:05:14,151 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:05:14,151 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:05:14,153 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:05:14,153 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:05:14,153 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:07:52,861 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:07:52,861 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:07:52,864 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:07:52,864 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:07:52,864 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:08,799 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:08,799 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:08,803 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:08,803 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:08,803 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,250 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,250 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,250 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,250 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,250 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:11:14,253 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,631 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,631 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,722 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,722 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,722 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:14:09,725 ERROR <type 'NoneType'>
+2012-12-19 15:14:09,725 ERROR <type 'NoneType'>
+2012-12-19 15:14:09,725 ERROR <type 'NoneType'>
+2012-12-19 15:16:31,167 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:16:31,167 ERROR wistia - matches_video_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:16:31,171 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:16:31,171 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:16:31,171 ERROR cls.format_url http://fast.wistia.com/embed/iframe/ivaqrc8ue8
+2012-12-19 15:16:31,173 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:16:31,173 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:16:31,173 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:16:31,174 ERROR <type 'NoneType'>
+2012-12-19 15:16:31,174 ERROR <type 'NoneType'>
+2012-12-19 15:16:31,174 ERROR <type 'NoneType'>
+2012-12-19 15:26:40,901 ERROR wistia - matches_video_url http://vimeo.com/39734142
+2012-12-19 15:26:40,901 ERROR wistia - matches_video_url http://vimeo.com/39734142
+2012-12-19 15:26:40,904 ERROR cls.format_url http://vimeo.com/39734142
+2012-12-19 15:26:40,904 ERROR cls.format_url http://vimeo.com/39734142
+2012-12-19 15:26:40,904 ERROR cls.format_url http://vimeo.com/39734142
+2012-12-19 15:26:40,905 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:40,905 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:40,905 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:40,905 ERROR <type 'NoneType'>
+2012-12-19 15:26:40,905 ERROR <type 'NoneType'>
+2012-12-19 15:26:40,905 ERROR <type 'NoneType'>
+2012-12-19 15:26:55,331 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,331 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,331 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,331 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,331 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,334 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,336 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,337 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:26:55,342 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias
+2012-12-19 15:28:51,836 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,836 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,840 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,840 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,840 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,841 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:28:51,841 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:28:51,841 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:28:51,843 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:28:51,843 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:28:51,843 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:28:51,845 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,845 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:28:51,845 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,303 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,303 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,303 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,303 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,303 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,306 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,307 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,308 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:18,309 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,210 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,213 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,215 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,217 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:30:23,218 ERROR wistia - get_video_id 0 http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,339 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,339 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,342 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,342 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,342 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:33:08,344 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:33:08,344 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:33:08,344 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:33:08,345 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:33:08,345 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:33:08,345 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:36:17,600 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,600 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,602 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,602 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,602 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,602 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:36:17,602 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:36:17,602 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:36:17,603 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:36:17,603 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:36:17,603 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:36:17,603 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,603 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:36:17,603 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,066 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,066 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,084 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,084 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,084 ERROR cls.format_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,085 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:39:11,085 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:39:11,085 ERROR <type '_sre.SRE_Pattern'>
+2012-12-19 15:39:11,086 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:39:11,086 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:39:11,086 ERROR <type '_sre.SRE_Match'>
+2012-12-19 15:39:11,087 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,087 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,087 ERROR wistia - get_video_id a http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:39:11,090 ERROR wistia - get_video_id B hootsuite.wistia.com
+2012-12-19 15:39:11,090 ERROR wistia - get_video_id B hootsuite.wistia.com
+2012-12-19 15:39:11,090 ERROR wistia - get_video_id B hootsuite.wistia.com
+2012-12-19 15:39:11,091 ERROR wistia - get_video_id c medias
+2012-12-19 15:39:11,091 ERROR wistia - get_video_id c medias
+2012-12-19 15:39:11,091 ERROR wistia - get_video_id c medias
+2012-12-19 15:39:11,092 ERROR wistia - get_video_id D 17bvist1ia
+2012-12-19 15:39:11,092 ERROR wistia - get_video_id D 17bvist1ia
+2012-12-19 15:39:11,092 ERROR wistia - get_video_id D 17bvist1ia
+2012-12-19 15:41:05,541 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:41:05,541 ERROR wistia - matches_video_url http://hootsuite.wistia.com/medias/17bvist1ia
+2012-12-19 15:42:25,452 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:42:25,452 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:42:25,452 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:44:56,382 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:44:56,382 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:44:56,382 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:45:03,250 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:53:20,931 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:53:20,931 ERROR wistia - matches_video_url 17bvist1ia
+2012-12-19 15:53:20,931 ERROR wistia - matches_video_url 17bvist1ia

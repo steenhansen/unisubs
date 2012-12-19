@@ -75,9 +75,12 @@ unisubs.player.WistiaVideoSource.getMediaSource = function(videoURL, opt_videoCo
     // short future safe regex /https?:\/\/(.+)?(wistia\.com|wi\.st)\/.*/
     // example http://home.wistia.com/medias/e4a27b971d
     // example http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
-  alert(43);    
-    if (/^\s*https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/.*/.test(videoURL)) {
-      var videoIDExtract = /(wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?([^\?]*)/i.exec(videoURL);
+ 
+  //           http://hootsuite.wistia.com/medias/17bvist1ia
+    
+    if (/^\s*https?:\/\/(.+)?(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/.*/.test(videoURL)) {
+      var videoIDExtract = /(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?([^\?]*)/i.exec(videoURL);
+      console.log(videoIDExtract);
       if (videoIDExtract)
         return new unisubs.player.WistiaVideoSource(videoIDExtract[4], videoURL, opt_videoConfig);
     }

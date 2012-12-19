@@ -156,8 +156,10 @@ unisubs.player.MediaSource.html5VideoSource_ = function(videoSources, videoType)
 */
 unisubs.player.MediaSource.videoSourceForURL = function(videoURL, opt_videoConfig) {
     var mediaSource = null;
+    // console.log('length = ' + unisubs.player.MediaSource.SourceRegistry.length);
     for (var i=0; i < unisubs.player.MediaSource.SourceRegistry.length; i++){
         var source = unisubs.player.MediaSource.SourceRegistry[i](videoURL, opt_videoConfig);
+        // console.log('source = ' + unisubs.player.MediaSource.SourceRegistry[i]);
         if (source){
             mediaSource = source;
             break;
@@ -170,7 +172,7 @@ unisubs.player.MediaSource.videoSourceForURL = function(videoURL, opt_videoConfi
     if (mediaSource){
         return mediaSource;
     }
-    throw new Error("Unrecognized video url " + videoURL);
+    throw new Error("Unrecognized Video url " + videoURL);
 };
 
 /**
