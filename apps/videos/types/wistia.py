@@ -74,7 +74,7 @@ class WistiaVideoType(VideoType):
         log.setLevel(logging.WARNING)
 
         video_id = cls.get_video_id(url)
-        log.error('wistia - matches_video_url ' + video_id )
+        #log.error('wistia - matches_video_url ' + video_id )
         if video_id:
             return True
         return False
