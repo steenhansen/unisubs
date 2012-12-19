@@ -88,12 +88,14 @@ unisubs.player.MediaSource.bestHTML5VideoSource_ = function(videoSources) {
  * @return {?unisubs.player.MediaSource} video source, or null if none found.
  */
 unisubs.player.MediaSource.bestVideoSource = function(videoSpecs) {
-    var videoSources = goog.array.map(videoSpecs, function(spec) {
+  console.log('unisubs.player.MediaSource.bestVideoSource - 1');
+ 
+   var videoSources = goog.array.map(videoSpecs, function(spec) {
         return unisubs.player.MediaSource.videoSourceForSpec_(spec);
     });
+  console.log('unisubs.player.MediaSource.bestVideoSource - 2');
 
     var videoSource;
-
     for (var i=0; i < videoSources.length; i++) {
         videoSource = videoSources[i];
 

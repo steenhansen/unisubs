@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see
 # http://www.gnu.org/licenses/agpl-3.0.html.
+ 
+
 import babelsubs
 import chardet
 import re
@@ -185,7 +187,7 @@ class VideoForm(forms.Form):
 
                 raise forms.ValidationError(mark_safe(_(u"""You must link to a video on a compatible site (like YouTube) or directly to a
                     video file that works with HTML5 browsers. For example: http://mysite.com/myvideo.ogg or http://mysite.com/myipadvideo.m4v
-                    <a href="mailto:%s">Contact us</a> if there's a problem.""") % settings.FEEDBACK_EMAIL))
+                    <a href="mailto:%s">Contact us</a> if there's a Problem.""") % settings.FEEDBACK_EMAIL))
 
             else:
                 self._video_type = video_type
