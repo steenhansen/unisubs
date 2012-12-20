@@ -68,6 +68,7 @@ VIDEO_TYPE_VIMEO = 'V'
 VIDEO_TYPE_DAILYMOTION = 'D'
 VIDEO_TYPE_FLV = 'L'
 VIDEO_TYPE_BRIGHTCOVE = 'C'
+VIDEO_TYPE_WISTIA = 'W'
 VIDEO_TYPE_MP3 = 'M'
 VIDEO_TYPE = (
     (VIDEO_TYPE_HTML5, 'HTML5'),
@@ -80,6 +81,7 @@ VIDEO_TYPE = (
     (VIDEO_TYPE_DAILYMOTION, 'dailymotion.com'),
     (VIDEO_TYPE_FLV, 'FLV'),
     (VIDEO_TYPE_BRIGHTCOVE, 'brightcove.com'),
+    (VIDEO_TYPE_WISTIA, 'wistia.com'),
     (VIDEO_TYPE_MP3, 'MP3'),
 )
 VIDEO_META_CHOICES = (
@@ -403,23 +405,49 @@ class Video(models.Model):
     def get_or_create_for_url(cls, video_url=None, vt=None, user=None, timestamp=None):
         assert video_url or vt, 'should be video URL or VideoType'
         from types.base import VideoTypeError
-
+        
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')  
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
+        log.error(  'aaaaaaaaaa' + video_url )
         try:
             vt = vt or video_type_registrar.video_type_for_url(video_url)
+            log.error(  'dddddddddd' )
         except VideoTypeError:
+            log.error(  'eeeeeeeeee' )
             return None, False
+        log.error(  'bbbbbbbbbbbb'  )
+        #log.error( video_url + video_type_registrar.video_type_for_url(video_url) )
 
         if not vt:
             return None, False
+        log.error(  'ccccc' )
 
         try:
-            video_url_obj = VideoUrl.objects.get(
-                url=vt.convert_to_video_url())
-            video, created = video_url_obj.video, False
-        except models.ObjectDoesNotExist:
-            video, created = None, False
+            log.error(  '00000000000')
 
+            log.error( '55' + vt.convert_to_video_url())
+            log.error(  '3333333333333')
+
+            url=vt.convert_to_video_url()                                   # this seems to be just fine?? 
+
+            log.error(url)      
+            log.error(  '444444444444')
+
+            video_url_obj = VideoUrl.objects.get(
+                                      url=vt.convert_to_video_url())        # this is where the exception is 
+            log.error(  '11111111')
+            video, created = video_url_obj.video, False
+            log.error(  '22222')
+        except models.ObjectDoesNotExist:
+            log.error(  'fail except')
+            video, created = None, False
+            log.error(  'none false')
         if not video:
+            log.error(  'not video')
             try:
                 video_url_obj = VideoUrl.objects.get(
                     type=vt.abbreviation, **vt.create_kwars())

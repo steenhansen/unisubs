@@ -82,9 +82,10 @@ class VideoTypeRegistrar(dict):
         hdlr.setFormatter(formatter)
         log.addHandler(hdlr) 
         log.setLevel(logging.WARNING)
+      #  log.error('ssss123123') 
 
         for video_type in self.itervalues():
-           # log.error(video_type ) 
+           # log.error('ssssxx' ) 
             if video_type.matches_video_url(url):
               #  log.error('matched!!! 23234df')
                 return video_type(url)

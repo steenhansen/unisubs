@@ -77,13 +77,12 @@ unisubs.player.WistiaVideoSource.getMediaSource = function(videoURL, opt_videoCo
     // example http://fast.wistia.com/embed/iframe/b0767e8ebb?version=v1&controlsVisibleOnLoad=true&playerColor=aae3d8
  
   //           http://hootsuite.wistia.com/medias/17bvist1ia
-     console.log('before11'+videoURL+'00');
     if (/^\s*https?:\/\/(.+)?(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?.*/.test(videoURL)) {
-console.log('after  ');
       var videoIDExtract = /(hootsuite\.wistia\.com|wi\.st)\/(medias|embed)\/(iframe\/)?([^\?]*)/i.exec(videoURL);
-      console.log(videoIDExtract);
-      if (videoIDExtract)
+      if (videoIDExtract){
+        console.log(videoIDExtract[4], videoURL, opt_videoConfig);
         return new unisubs.player.WistiaVideoSource(videoIDExtract[4], videoURL, opt_videoConfig);
+      }
     }
     return null;
 }

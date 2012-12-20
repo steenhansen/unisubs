@@ -37,7 +37,7 @@ DAILYMOTION_REGEX = re.compile(r'https?://(?:[^/]+[.])?dailymotion.com/video/(?P
 #WISTIA_REGEX = re.compile(r'https?://([^/]+\.)?(hootsuite\.wistia\.com)/(medias|embed)/(iframe/)?(?P<video_id>[-0-9a-zA-Z]+)')
 
 #http://hootsuite.wistia.com/medias/17bvist1ia
-WISTIA_REGEX = re.compile(r'http://(hootsuite\.wistia\.com)/(medias)/([-0-9a-zA-Z]+)')
+WISTIA_REGEX = re.compile(r'http://hootsuite\.wistia\.com/embed/iframe/([-0-9a-zA-Z]+)')
 
 
 class WistiaVideoType(VideoType):
@@ -56,7 +56,7 @@ class WistiaVideoType(VideoType):
         return self.videoid
 #   http://fast.wistia.com/embed/iframe/ivaqrc8ue8
     def convert_to_video_hootsuite(self):
-        return 'http://fast.wistia.com/embed/iframe/%s' % self.video_id
+        return 'http://hootsuite.wistia.com/embed/iframe/%s' % self.video_id
 
     @classmethod
     def video_url(cls, obj):
@@ -72,22 +72,36 @@ class WistiaVideoType(VideoType):
         hdlr.setFormatter(formatter)
         log.addHandler(hdlr) 
         log.setLevel(logging.WARNING)
+       # log.error('ssss in ') 
 
         video_id = cls.get_video_id(url)
         #log.error('wistia - matches_video_url ' + video_id )
+        #log.error('ssss out ') 
         if video_id:
+          #  log.error('return true')
             return True
+       # log.error('return false')
         return False
 
     def create_kwars(self):
         return {'videoid': self.video_id}
 
     def set_values(self, video_obj):
-        #metadata = self.get_metadata(self.video_id)
+
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
+        log.error( 'yep3' )
+
+
+        metadata = self.get_metadata(self.video_id)
         #video_obj.description = metadata.get('description', u'')
         #video_obj.title = metadata.get('title', '')
         #video_obj.thumbnail = metadata.get('thumbnail_url') or ''
-        return video_obj
+        #return video_obj
 
     @classmethod
     def get_video_id(cls, video_url):
@@ -101,32 +115,44 @@ class WistiaVideoType(VideoType):
  
      #   log.error('cls.format_url ' + cls.format_url(video_url) )
 
-      #  log.error(type(WISTIA_REGEX))
+     #   log.error('nnn')
 
         match = WISTIA_REGEX.match(cls.format_url(video_url))
  
-       # log.error( type(match) )
+      #  log.error(cls.format_url(video_url) )
+      #  log.error('qqqq')
 
 
-     #   log.error('wistia - get_video_id a ' + match.group(0) )
-     #   log.error('wistia - get_video_id B ' + match.group(1) )
-     #   log.error('wistia - get_video_id c ' + match.group(2) )
-     #   log.error('wistia - get_video_id D ' + match.group(3) )
+        #log.error('wistia - get_video_id a ' + match.group(0) )
+       # log.error('wistia - get_video_id B ' + match.group(1) )
+      #  log.error('wistia - get_video_id c ' + match.group(2) )
+      #  log.error('wistia - get_video_id D ' + match.group(3) )
      #   log.error('wistia - get_video_id e ' + match.group(4) )
-        return match and match.group(3)
-"""
+        return match and match.group(1)
+
+   
+
     @classmethod
     def get_metadata(cls, video_id):
         #FIXME: get_metadata is called twice: in matches_video_url and set_values
-        conn = httplib.HTTPConnection("www.dailymotion.com")
-        conn.request("GET", "/json/video/" + video_id)
+        log = logging.getLogger('myapp')
+        hdlr = logging.FileHandler('/opt/apps/vagrant/unisubs/myapp.log')
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        log.addHandler(hdlr) 
+        log.setLevel(logging.WARNING)
+        log.error( 'yep' )
+# WISTIA_API_URL = 'http://fast.wistia.com/oembed?url=http://hootsuite.wistia.com/medias/'
+        conn = httplib.HTTPConnection("fast.wistia.com/oembed?url=http://hootsuite.wistia.com/medias/")
+        conn.request("GET",  video_id)
         try:
             response = conn.getresponse()
             body = response.read()
+            log.error(body)
             try:
                 return json.loads(body)
             except json.JSONDecodeError:
                 raise VideoTypeError(_(u'Video is unavailable'))
         except httplib.BadStatusLine:
             return {}
-"""
+

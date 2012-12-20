@@ -132,6 +132,7 @@ unisubs.player.MediaSource.bestVideoSource = function(videoSpecs) {
 };
 
 unisubs.player.MediaSource.videoSourceForSpec_ = function(videoSpec) {
+  console.log('goog');
     if (goog.isString(videoSpec)) {
         return unisubs.player.MediaSource.videoSourceForURL(
             videoSpec);
@@ -160,22 +161,25 @@ unisubs.player.MediaSource.videoSourceForURL = function(videoURL, opt_videoConfi
     for (var i=0; i < unisubs.player.MediaSource.SourceRegistry.length; i++){
         var source = unisubs.player.MediaSource.SourceRegistry[i](videoURL, opt_videoConfig);
 
-        //console.log('videoURL = ' + videoURL);
+        //  console.log('source  = ' + source);
         //console.log('opt_videoConfig = ' + opt_videoConfig);
 
         // console.log('source = ' + unisubs.player.MediaSource.SourceRegistry[i]);
         if (source){
             mediaSource = source;
+            //console.log('mediaSource  = ' + mediaSource);
             break;
         }
     }
-    //// console.log('fail');
-
+    
+    // console.log('nop, norhinf' + arguments.callee.caller.toString());
     // The Html5VideoSource is always our last resource
     if (!mediaSource){
+      //console.log('ok in');
         mediaSource = unisubs.player.Html5VideoSource.getMediaSource (videoURL, opt_videoConfig);
     }
     if (mediaSource){
+      //console.log('retuen good');
         return mediaSource;
     }
     throw new Error("Unrecognized Video url " + videoURL);

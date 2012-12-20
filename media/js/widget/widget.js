@@ -134,6 +134,9 @@ unisubs.widget.Widget.prototype.findVideoSource_ = function() {
         return unisubs.player.MediaSource.bestVideoSource(
             goog.array.concat(mainVideoSpec, this.alternateVideoURLs_));
     } else {
+   // var zxc= unisubs.player.MediaSource.videoSourceForURL(
+     //       this.videoURL_, this.videoConfig_);
+  //  console.log('widget.js 29387' + zxc);
         return unisubs.player.MediaSource.videoSourceForURL(
             this.videoURL_, this.videoConfig_);
     }
@@ -156,8 +159,9 @@ unisubs.widget.Widget.prototype.addVideoLoadingPlaceholder_ = function(el) {
 };
 unisubs.widget.Widget.prototype.addWidget_ = function(el) {
     try {
+       
         this.videoSource_ = this.findVideoSource_();
-    }
+             }
     catch (err) {
         // TODO: format this more.
         el.innerHTML = err.message;
@@ -167,19 +171,25 @@ unisubs.widget.Widget.prototype.addWidget_ = function(el) {
     this.addVideoLoadingPlaceholder_(el);
 
     if (this.streamer_) {
+   
         this.streamBox_ = new unisubs.streamer.StreamBox();
         var streamerContainer = new goog.ui.Component();
         this.addChild(streamerContainer, true);
         streamerContainer.addChild(this.streamBox_, true);
         // TODO: show loading?
     } else {
+    
+
         this.videoTab_ = new unisubs.widget.HangingVideoTab();
+         console.log('111' + this.videoTab_);
         var videoTabContainer = new goog.ui.Component();
+         console.log('222' + videoTabContainer);
         this.addChild(videoTabContainer, true);
         videoTabContainer.addChild(this.videoTab_, true);
         videoTabContainer.getElement().className =
             'unisubs-videoTab-container';
         this.videoTab_.showLoading();
+         console.log('afdslj;_33333333333');
     }
     var args = {
         'video_url': this.videoURL_,
@@ -188,15 +198,17 @@ unisubs.widget.Widget.prototype.addWidget_ = function(el) {
     if (this.baseState_) {
         args['base_state'] = this.baseState_.ORIGINAL_PARAM;
     }
+    console.log('afdslj;_86865875');
     unisubs.Rpc.call(
         'show_widget', args,
         goog.bind(this.initializeState_, this),
         goog.bind(this.showWidgetError_, this));
-
+console.log('afdslj;9999999999999999');
     unisubs.Tracker.getInstance().trackEvent(
         "Widget displayed",
         window.location.href,
         this.videoSource_.getVideoURL());
+        console.log('afdslj;3333333333');
 };
 unisubs.widget.Widget.prototype.showWidgetError_ = function() {
     // call to show_widget timed out.
@@ -207,6 +219,7 @@ unisubs.widget.Widget.prototype.showWidgetError_ = function() {
         }
     }
     if (this.videoTab_) {
+    console.log('errror ');
         this.videoTab_.showError();
     }
 };
